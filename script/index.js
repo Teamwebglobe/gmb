@@ -1,5 +1,4 @@
 // loader //
-
 document.addEventListener("DOMContentLoaded", function () {
   let countElement = document.getElementById("count");
   let progressBar = document.querySelector(".progress-bar");
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(interval);
       setTimeout(() => {
         loaderWrapper.classList.add("hide-loader"); //
-      }, 800); // Delay before hiding the loader
+      }, 500); // Delay before hiding the loader
     }
   }, 50);
 });
