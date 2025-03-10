@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loaderWrapper.classList.add("hide-loader"); //
       }, 500); // Delay before hiding the loader
     }
-  }, 50);
+  }, 20);
 });
 
 //header//
@@ -33,4 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
   closeBtn.addEventListener("click", function () {
     headerWrapper.classList.remove("show-header");
   });
+});
+
+// scroll to top //
+document.querySelector(".up-arrow").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+gsap.to(".up-arrow", {
+  scrollTrigger: {
+    trigger: ".section2",
+    markers: false,
+    start: "top 80%",
+    end: "10% 50%",
+    scrub: true,
+  },
+  rotate: "180deg",
+  duration: 1,
 });
