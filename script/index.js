@@ -1,3 +1,4 @@
+// loader //
 document.addEventListener("DOMContentLoaded", function () {
   // Scroll to top on page refresh
   window.scrollTo(0, 0);
@@ -30,4 +31,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, intervalTime);
   };
+});
+
+//header//
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBar = document.querySelector(".menu-bar");
+  const headerWrapper = document.querySelector(".header2-wrapper");
+  const closeBtn = document.querySelector(".ph-x-circle");
+
+  menuBar.addEventListener("click", function () {
+    headerWrapper.classList.toggle("show-header");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    headerWrapper.classList.remove("show-header");
+  });
 });
