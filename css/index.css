@@ -806,8 +806,24 @@ html {
 }
 
 .divider {
-  border-bottom: 1px solid var(--color6);
   padding-bottom: 2em;
+  position: relative;
+}
+
+.divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: var(--color6);
+  bottom: 0;
+  transform: translate(-50% -50%);
+  height: 1px;
+  width: 0;
+  transition: ease 2s;
+}
+
+.show-divider::after {
+  width: 100% !important;
 }
 
 .footer-contact .contact-1 {

@@ -52,28 +52,31 @@ document.querySelector(".up-arrow").addEventListener("click", function () {
   });
 });
 
-gsap.to(".up-arrow", {
-  scrollTrigger: {
-    trigger: ".section2",
-    markers: false,
-    start: "top 80%",
-    end: "10% 50%",
-    scrub: true,
-  },
-  rotate: "180deg",
-  duration: 0.5,
-});
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to(".up-arrow", {
+    scrollTrigger: {
+      trigger: ".section2",
 
-gsap.to(".up-arrow i", {
-  scrollTrigger: {
-    trigger: ".footer",
-    start: "top bottom",
-    end: "top center",
-    toggleActions: "play none none reverse",
+      start: "top 80%",
+      end: "10% 50%",
+      scrub: true,
+    },
+    rotate: "180deg",
     duration: 0.5,
-    onEnter: () => gsap.to(".up-arrow i", { color: "#ffff" }),
-    onLeaveBack: () => gsap.to(".up-arrow i", { color: "" }),
-  },
+  });
+
+  gsap.to(".up-arrow i", {
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "top bottom",
+      end: "top center",
+      toggleActions: "play none none reverse",
+      duration: 0.5,
+      onEnter: () => gsap.to(".up-arrow i", { color: "#ffff" }),
+      onLeaveBack: () => gsap.to(".up-arrow i", { color: "" }),
+    },
+  });
 });
 
 //section4 svg animations //
@@ -93,4 +96,16 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     }
   );
+});
+
+// footer line animation//
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: ".footer",
+    start: "40% center",
+    once: true,
+    toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
+  });
 });
