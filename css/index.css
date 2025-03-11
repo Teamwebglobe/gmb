@@ -475,9 +475,9 @@ html {
   position: absolute;
   bottom: 0;
   left: 0;
-  stroke-dasharray: 3000;
+  /* stroke-dasharray: 3000;
   stroke-dashoffset: -3000;
-  animation: draw 3s ease-in-out forwards;
+  animation: draw 3s ease-in-out forwards; */
 }
 
 .section4-content {
@@ -655,7 +655,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color4);
+  /* background-color: var(--color4); */
 }
 
 .section7 h2 {

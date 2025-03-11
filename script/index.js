@@ -52,5 +52,17 @@ gsap.to(".up-arrow", {
     scrub: true,
   },
   rotate: "180deg",
-  duration: 1,
+  duration: 0.5,
+});
+
+gsap.to(".up-arrow i", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top bottom",
+    end: "top center",
+    toggleActions: "play none none reverse",
+    duration: 0.5,
+    onEnter: () => gsap.to(".up-arrow i", { color: "#ffff" }),
+    onLeaveBack: () => gsap.to(".up-arrow i", { color: "" }),
+  },
 });
