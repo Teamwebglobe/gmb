@@ -1,78 +1,32 @@
 // loader //
-// document.addEventListener("DOMContentLoaded", function () {
-//   let countElement = document.getElementById("count");
-//   let progressBar = document.querySelector(".progress-bar");
-//   let loaderWrapper = document.querySelector(".loader-wrapper");
-
-//   let loadProgress = 0;
-//   let interval = setInterval(() => {
-//     loadProgress += 1;
-//     countElement.textContent =
-//       loadProgress < 10 ? "0" + loadProgress : loadProgress;
-//     progressBar.style.width = loadProgress + "%";
-
-//     if (loadProgress >= 100) {
-//       clearInterval(interval);
-//       setTimeout(() => {
-//         loaderWrapper.classList.add("hide-loader"); // Hide the loader
-
-//         // Play GSAP animation after loader is hidden
-//         gsap.from(".a1", {
-//           y: 30,
-//           opacity: 0,
-//           stagger: 0.2,
-//           duration: 0.5,
-//           delay: 0.4,
-//         });
-//       }, 500); // Delay before hiding the loader
-//     }
-//   }, 20);
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   let countElement = document.getElementById("count");
   let progressBar = document.querySelector(".progress-bar");
   let loaderWrapper = document.querySelector(".loader-wrapper");
 
-  function updateProgress(percentage) {
-    let progress = Math.min(percentage, 100);
-    countElement.textContent = progress < 10 ? "0" + progress : progress;
-    progressBar.style.width = progress + "%";
-  }
+  let loadProgress = 0;
+  let interval = setInterval(() => {
+    loadProgress += 1;
+    countElement.textContent =
+      loadProgress < 10 ? "0" + loadProgress : loadProgress;
+    progressBar.style.width = loadProgress + "%";
 
-  function simulateLoading() {
-    let totalResources = performance.getEntriesByType("resource").length || 50; // Fallback if no resources detected
-    let loadedResources = 0;
+    if (loadProgress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        loaderWrapper.classList.add("hide-loader"); // Hide the loader
 
-    function checkProgress() {
-      let newLoadedResources = performance.getEntriesByType("resource").length;
-      loadedResources = Math.min(newLoadedResources, totalResources);
-
-      let loadPercentage = Math.floor((loadedResources / totalResources) * 100);
-      updateProgress(loadPercentage);
-
-      if (loadPercentage < 100) {
-        requestAnimationFrame(checkProgress);
-      } else {
-        setTimeout(() => {
-          loaderWrapper.classList.add("hide-loader");
-
-          // Play GSAP animation after loader is hidden
-          gsap.from(".a1", {
-            y: 30,
-            opacity: 0,
-            stagger: 0.2,
-            duration: 0.5,
-            delay: 0.4,
-          });
-        }, 500);
-      }
+        // Play GSAP animation after loader is hidden
+        gsap.from(".a1", {
+          y: 30,
+          opacity: 0,
+          stagger: 0.2,
+          duration: 0.5,
+          delay: 0.4,
+        });
+      }, 500); // Delay before hiding the loader
     }
-
-    checkProgress();
-  }
-
-  window.addEventListener("load", simulateLoading);
+  }, 20);
 });
 
 //header//
