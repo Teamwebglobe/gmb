@@ -387,7 +387,7 @@ html {
   font-size: 18px;
 }
 
-.section1-content h1 span,
+.section1-content h1 .h1-span,
 .section1-content p span {
   color: var(--primary);
 }

@@ -14,7 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (loadProgress >= 100) {
       clearInterval(interval);
       setTimeout(() => {
-        loaderWrapper.classList.add("hide-loader"); //
+        loaderWrapper.classList.add("hide-loader"); // Hide the loader
+
+        // Play GSAP animation after loader is hidden
+        gsap.from(".a1", {
+          y: 30,
+          opacity: 0,
+          stagger: 0.2,
+          duration: 0.5,
+          delay: 0.4,
+        });
       }, 500); // Delay before hiding the loader
     }
   }, 20);
@@ -66,3 +75,5 @@ gsap.to(".up-arrow i", {
     onLeaveBack: () => gsap.to(".up-arrow i", { color: "" }),
   },
 });
+
+//section1 animations //
