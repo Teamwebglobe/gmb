@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.to(".up-arrow", {
     scrollTrigger: {
       trigger: ".section2",
-
       start: "top 80%",
       end: "10% 50%",
       scrub: true,
@@ -65,34 +64,30 @@ document.addEventListener("DOMContentLoaded", function () {
     rotate: "180deg",
     duration: 0.5,
   });
-
-  gsap.to(".up-arrow i", {
-    scrollTrigger: {
-      trigger: ".footer",
-      start: "top bottom",
-      end: "top center",
-      toggleActions: "play none none reverse",
-      duration: 0.5,
-      onEnter: () => gsap.to(".up-arrow i", { color: "#ffff" }),
-      onLeaveBack: () => gsap.to(".up-arrow i", { color: "" }),
-    },
-  });
 });
 
 //section4 svg animations //
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
+  gsap.to(".section4", {
+    scrollTrigger: {
+      trigger: ".section4",
+      start: "50px 100px ",
+      pin: true,
+    },
+  });
+
   gsap.fromTo(
     ".section4 svg path",
     { strokeDasharray: 3000, strokeDashoffset: -3000 }, // Start state
     {
       strokeDashoffset: 0, // Draw animation
-      duration: 2, // Animation duration
+      duration: 3, // Animation duration
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".section4",
-        start: "45% 80%",
+        start: "top center",
       },
     }
   );
