@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// scroll to top //
+// scroll to top upp arrow animations //
 document.querySelector(".up-arrow").addEventListener("click", function () {
   window.scrollTo({
     top: 0,
@@ -76,4 +76,21 @@ gsap.to(".up-arrow i", {
   },
 });
 
-//section1 animations //
+//section4 svg animations //
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".section4 svg path",
+    { strokeDasharray: 3000, strokeDashoffset: -3000 }, // Start state
+    {
+      strokeDashoffset: 0, // Draw animation
+      duration: 2, // Animation duration
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".section4",
+        start: "45% 80%",
+      },
+    }
+  );
+});
