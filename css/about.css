@@ -1,0 +1,226 @@
+.section1-about .section1 p {
+  font-size: 24px;
+  color: var(--color6);
+}
+
+.section1-about .section1 img {
+  margin-top: 2em;
+}
+
+/*section2-about*/
+
+.section2-about {
+  background-color: var(--black);
+  padding: 6em 0em;
+  margin-bottom: 6em;
+}
+
+.section2-about .head-row {
+  align-items: start;
+  margin: 0;
+}
+
+.section2-about .head2 {
+  color: var(--white);
+}
+
+.section2-about .btns {
+  margin-top: 2em;
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.section2-about .about-content p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+/*section3-about*/
+
+.section3-about {
+  margin-bottom: 6em;
+}
+
+.section3-about .container .row {
+  display: flex;
+  justify-content: center;
+}
+
+.section3-about .bento-box {
+  padding: 2em 3em;
+  background-color: var(--color4);
+  border-radius: 20px;
+}
+
+.section3-about .bento .head2 {
+  margin-bottom: 0.5em;
+}
+
+.section3-about .bento .img-cont {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 20px;
+}
+
+.bento-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section3-about .bento-box h5 {
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.8em;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.section3-about .bento-box p {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.section3-about .bento-box:nth-child(3) {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+/*section4-about*/
+
+.section4-about .section2-about {
+  background-color: transparent;
+}
+
+.section4-about .head2 {
+  color: var(--text);
+}
+.section4-about .about-content p {
+  font-weight: 400;
+  color: var(--text);
+}
+
+/*section5-about*/
+.section5-about {
+  background-image: url("../images/blue-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  background-attachment: fixed;
+  margin: 12em 0em 6em 0em;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section5-about .head2 {
+  font-size: 64px;
+  color: var(--white);
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.section5-about .content p {
+  color: var(--white);
+  font-weight: 300;
+  margin: 2em 0em;
+  width: 70%;
+}
+
+.section5-about .content .btns {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.section5-about-img img {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  width: fit-content;
+  height: fit-content;
+}
+
+.section5-about svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: fit-content;
+  transform: rotate(-180deg);
+}
+
+/*section6-about*/
+
+.section6-about {
+  margin-bottom: 6em;
+}
+
+.section6-about .swiper-wrapper {
+  padding-left: 7vw;
+}
+
+.section6-about .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.section6-about .testimonial-card {
+  background-color: var(--color4);
+  padding: 2em 3em;
+}
+
+.section6-about .testimonial-card h4 {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section6-about .testimonial-card .test-name p {
+  font-size: 14px;
+  color: var(--color6);
+}
+
+.section6-about .testimonial-card .test-content p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.section6-about .testimonial-card i {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.swiper-btns {
+  display: flex;
+  gap: 2em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative !important;
+  width: fit-content !important;
+  margin: 0 !important;
+  color: var(--white) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px !important;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--primary);
+}

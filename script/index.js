@@ -53,16 +53,18 @@ document.querySelector(".up-arrow").addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.to(".up-arrow", {
-    scrollTrigger: {
-      trigger: ".section2",
-      start: "top 80%",
-      end: "10% 50%",
-      scrub: true,
-    },
-    rotate: "180deg",
-    duration: 0.5,
+  gsap.registerPlugin();
+
+  window.addEventListener("scroll", function () {
+    let scrollValue = window.scrollY; // Get current scroll position
+    let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
+    // Ensures smooth transition from 0 to 180 degrees
+
+    gsap.to(".up-arrow", {
+      rotate: rotation,
+      duration: 0.1, // Short duration to create scrub-like effect
+      ease: "none",
+    });
   });
 });
 
@@ -93,6 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer");
+  const upArrow = document.querySelector(".up-arrow i");
+  let originalColor = getComputedStyle(upArrow).color;
+
+  window.addEventListener("scroll", function () {
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight && footerRect.bottom > 0) {
+      gsap.to(upArrow, { color: "var(--white)", duration: 0.1 });
+    } else {
+      gsap.to(upArrow, {
+        color: originalColor,
+        duration: 0.1,
+      });
+    }
+  });
+});
+
 // footer line animation//
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
@@ -103,4 +125,32 @@ document.addEventListener("DOMContentLoaded", function () {
     once: true,
     toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
   });
+});
+
+//swiper//
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 2.5,
+      spaceBetween: 50,
+    },
+  },
 });
