@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ScrollTrigger.create({
     trigger: ".footer",
-    start: "40% center",
+    start: "20% center",
     once: true,
     toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
   });
