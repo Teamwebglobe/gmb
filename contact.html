@@ -27,14 +27,14 @@
   </head>
   <body>
     <!-- Loader -->
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
       <p class="count-numbr">
         <span id="count">01</span> <span class="percent">% </span>
       </p>
       <div class="bar-loader">
         <div class="progress-bar"></div>
       </div>
-    </div>
+    </div> -->
 
     <!--header2-->
     <div class="header2-wrapper">
@@ -151,33 +151,41 @@
           </form>
         </div>
         <div class="col-md-5">
-          <div class="contact-info d-flex flex-column gap-4">
-            <a href="#" class="d-flex align-items-center gap-3"
-              ><i class="ph ph-envelope" style="font-size: 22px"></i
-              ><strong>info@gmail.com</strong></a
-            >
-            <a href="#" class="d-flex align-items-center gap-3"
-              ><i class="ph ph-phone" style="font-size: 22px"></i
-              ><strong>+381 55 100 3221</strong></a
-            >
-            <a href="#" class="d-flex align-items-center gap-3"
-              ><i class="ph ph-map-pin" style="font-size: 22px"></i
-              ><strong>Hadzi-ruvimova 15, 11000 Washington, Serbia</strong></a
-            >
+          <div class="ps-3">
+            <div class="contact-info d-flex flex-column gap-4">
+              <a href="#" class="d-flex align-items-center gap-3"
+                ><i class="ph ph-envelope" style="font-size: 22px"></i
+                ><strong>info@gmail.com</strong></a
+              >
+              <a href="#" class="d-flex align-items-center gap-3"
+                ><i class="ph ph-phone" style="font-size: 22px"></i
+                ><strong>+381 55 100 3221</strong></a
+              >
+              <a href="#" class="d-flex align-items-center gap-3"
+                ><i class="ph ph-map-pin" style="font-size: 22px"></i
+                ><strong>Hadzi-ruvimova 15, 11000 Washington, Serbia</strong></a
+              >
 
-            <div class="social-icons d-flex mt-2">
-              <a href="#!" class="si-d"><i class="ph ph-linkedin-logo"></i></a>
-              <a href="#!" class="si-d"><i class="ph ph-facebook-logo"></i></a>
-              <a href="#!" class="si-d"><i class="ph ph-instagram-logo"></i></a>
-              <a href="#!" class="si-d"><i class="ph ph-youtube-logo"></i></a>
+              <div class="social-icons d-flex mt-2">
+                <a href="#!" class="si-d"
+                  ><i class="ph ph-linkedin-logo"></i
+                ></a>
+                <a href="#!" class="si-d"
+                  ><i class="ph ph-facebook-logo"></i
+                ></a>
+                <a href="#!" class="si-d"
+                  ><i class="ph ph-instagram-logo"></i
+                ></a>
+                <a href="#!" class="si-d"><i class="ph ph-youtube-logo"></i></a>
+              </div>
             </div>
-          </div>
-          <div class="contact-message">
-            <p>
-              Want to get in touch? Feel free to reach out using the inquiry box
-              or contact information below.
-              <span>We look forward to hearing from you.</span>
-            </p>
+            <div class="contact-message">
+              <p>
+                Want to get in touch? Feel free to reach out using the inquiry
+                box or contact information below.
+                <span>We look forward to hearing from you.</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -231,6 +239,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // footer line animation//
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+          trigger: ".footer",
+          start: "10% center",
+          once: true,
+          toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
+        });
+      });
+    </script>
 
     <!--js bootstrap-->
     <script

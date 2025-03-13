@@ -53,8 +53,6 @@ document.querySelector(".up-arrow").addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin();
-
   window.addEventListener("scroll", function () {
     let scrollValue = window.scrollY; // Get current scroll position
     let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
@@ -121,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ScrollTrigger.create({
     trigger: ".footer",
-    start: "20% center",
+    start: "10% center",
     once: true,
     toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
   });

@@ -1,0 +1,90 @@
+.section1-services {
+  padding: 8vw 0vw 5vw 0vw;
+}
+
+.section1-services h2 {
+  font-size: 62px;
+  line-height: 80px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section1-services h2 span {
+  color: var(--primary);
+}
+
+.section1-services p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/*section2-services*/
+.section2-services {
+  padding-left: 7.5vw;
+  margin-bottom: 6em;
+  display: flex;
+  gap: 2em;
+  overflow-x: hidden;
+}
+
+.service-container {
+  height: 85vh;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color4);
+}
+
+.service-container h3 {
+  display: flex;
+  gap: 0.8em;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+}
+.service-container h3 span {
+  font-weight: 600;
+}
+
+.service-container .btns {
+  width: fit-content;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  margin-top: 1em;
+  color: var(--white);
+}
+
+.service-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.service-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section2-services .service-container:nth-child(2),
+.section2-services .service-container:nth-child(6),
+.section2-services .service-container:nth-child(10) {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.section2-services .service-container:nth-child(2) .btns,
+.section2-services .service-container:nth-child(6) .btns,
+.section2-services .service-container:nth-child(10) .btns {
+  background-color: var(--white);
+  color: var(--text);
+}
