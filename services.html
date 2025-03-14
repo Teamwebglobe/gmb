@@ -269,25 +269,6 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
-        const contents = gsap.utils.toArray(
-          ".section2-services .service-container"
-        );
-
-        gsap.to(contents, {
-          xPercent: -88 * (contents.length - 1),
-          scrollTrigger: {
-            trigger: ".section2-services",
-            start: "42% center",
-            pin: true,
-            scrub: 2,
-          },
-        });
-      });
-    </script>
-
     <!--footer-->
     <div class="footer">
       <div class="container">
@@ -336,6 +317,25 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+        const contents = gsap.utils.toArray(
+          ".section2-services .service-container"
+        );
+
+        gsap.to(contents, {
+          xPercent: -88 * (contents.length - 1),
+          scrollTrigger: {
+            trigger: ".section2-services",
+            start: "42% center",
+            pin: true,
+            scrub: 1,
+          },
+        });
+      });
+    </script>
 
     <!--js bootstrap-->
     <script

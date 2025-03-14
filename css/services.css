@@ -88,3 +88,9 @@
   background-color: var(--white);
   color: var(--text);
 }
+
+.section2-services .service-container:nth-child(2) .btns::before,
+.section2-services .service-container:nth-child(6) .btns::before,
+.section2-services .service-container:nth-child(10) .btns::before {
+  background-color: var(--white);
+}

@@ -1,0 +1,232 @@
+.loader-wrapper {
+  background-color: var(--health);
+}
+
+.header1 .menus ul li a:hover {
+  color: var(--health);
+}
+
+.btns {
+  border-color: var(--health);
+}
+
+.btns:hover {
+  border-color: var(--health);
+}
+
+.btns::before {
+  background-color: var(--health);
+}
+
+.health-tag-header {
+  background-color: var(--health);
+}
+
+/*section1-health*/
+
+.section1-health {
+  height: 100vh;
+  margin-bottom: 6em;
+}
+
+.section1-health .col-6 {
+  padding: 0;
+}
+
+.section1-health-content {
+  padding: 5vw;
+  background-image: url("../images/health-bg-1.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.section1-health-content h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 2em;
+}
+
+.section1-health-content p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 28px;
+  width: 80%;
+}
+
+.section1-health img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: right top;
+}
+
+/*section2-health*/
+
+.section2-health {
+  margin-bottom: 6em;
+}
+.section2-health .head1 {
+  color: var(--health);
+}
+
+.section2-health .head2 {
+  /* font-size: 28px;
+  line-height: 42px; */
+}
+
+.section2-health .btns {
+  margin-top: 2em;
+}
+
+.section2-health p {
+  margin-bottom: 1em;
+  line-height: 28px;
+}
+
+.section3-row-2 .card-wrapper {
+  background-color: var(--white);
+  border: 1px solid var(--color5);
+  border-radius: 20px;
+}
+
+.section3-row-2 .col-4:nth-child(2) .card-wrapper {
+  background-color: var(--health);
+  color: var(--white);
+  border: none;
+}
+
+.section3-row-2 .col-4:nth-child(2) .card-wrapper span {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.section3-row-2 .card-wrapper span {
+  border-color: var(--health);
+  color: var(--health);
+}
+
+/*secton3-health*/
+/*section6-about*/
+
+.service-process {
+  margin-bottom: 6em;
+  padding: 4em 0em;
+  background-image: url("../images/health-bg-1.jpg");
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.service-process .swiper-wrapper {
+  padding-left: 7vw;
+}
+
+.service-process .head1,
+.service-process .head2 {
+  color: var(--white);
+}
+
+.swiper-btns {
+  display: flex;
+  gap: 2em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative !important;
+  width: fit-content !important;
+  margin: 0 !important;
+  color: var(--health) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px !important;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.process-card {
+  height: 500px;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-card span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--health);
+  color: var(--white);
+  margin-bottom: 1em;
+}
+
+.process-card h4 {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.process-card p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.process-card img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*section4-health*/
+
+.section5-health > .col-8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section5-health > .col-8 .btns {
+  margin-top: 2em;
+}
+
+.section5-health h2 {
+  line-height: 90px;
+}
+
+.section5-health h2 .img-cont {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+}
+.section5-health h2 span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section8 .accordion {
+  --bs-accordion-active-color: var(--health);
+}

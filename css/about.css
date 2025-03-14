@@ -170,15 +170,12 @@
 }
 
 .section6-about .testimonial-card {
+  background-color: var(--color4);
+  padding: 2em 3em;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
   height: 300px;
-}
-
-.section6-about .testimonial-card {
-  background-color: var(--color4);
-  padding: 2em 3em;
 }
 
 .section6-about .testimonial-card h4 {
@@ -225,4 +222,32 @@
   align-items: center;
   border-radius: 50%;
   background-color: var(--primary);
+}
+
+/*section7-about*/
+.section7-about {
+  background-color: var(--primary);
+  padding: 2em 0em;
+}
+
+.section7-about .head-row {
+  align-items: center;
+}
+
+.section7-about-content h2 {
+  font-size: 62px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5em;
+}
+
+.section7-about-content h2 span {
+  color: var(--black);
+}
+
+.section7-about-content p {
+  font-size: 16px;
+  color: var(--white);
+  width: 70%;
+  font-weight: 300;
 }
