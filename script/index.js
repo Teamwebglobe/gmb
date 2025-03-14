@@ -45,26 +45,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // scroll to top upp arrow animations //
-document.querySelector(".up-arrow").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+// document.querySelector(".up-arrow").addEventListener("click", function () {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// });
 
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    let scrollValue = window.scrollY; // Get current scroll position
-    let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
-    // Ensures smooth transition from 0 to 180 degrees
+// document.addEventListener("DOMContentLoaded", function () {
+//   window.addEventListener("scroll", function () {
+//     let scrollValue = window.scrollY; // Get current scroll position
+//     let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
+//     // Ensures smooth transition from 0 to 180 degrees
 
-    gsap.to(".up-arrow", {
-      rotate: rotation,
-      duration: 0.1, // Short duration to create scrub-like effect
-      ease: "none",
-    });
-  });
-});
+//     gsap.to(".up-arrow", {
+//       rotate: rotation,
+//       duration: 0.1, // Short duration to create scrub-like effect
+//       ease: "none",
+//     });
+//   });
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const footer = document.querySelector(".footer");
+//   const upArrow = document.querySelector(".up-arrow i");
+//   let originalColor = getComputedStyle(upArrow).color;
+
+//   window.addEventListener("scroll", function () {
+//     const footerRect = footer.getBoundingClientRect();
+//     const windowHeight = window.innerHeight;
+
+//     if (footerRect.top < windowHeight && footerRect.bottom > 0) {
+//       gsap.to(upArrow, { color: "var(--white)", duration: 0.1 });
+//     } else {
+//       gsap.to(upArrow, {
+//         color: originalColor,
+//         duration: 0.1,
+//       });
+//     }
+//   });
+// });
 
 //section4 svg animations //
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,26 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     }
   );
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const footer = document.querySelector(".footer");
-  const upArrow = document.querySelector(".up-arrow i");
-  let originalColor = getComputedStyle(upArrow).color;
-
-  window.addEventListener("scroll", function () {
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (footerRect.top < windowHeight && footerRect.bottom > 0) {
-      gsap.to(upArrow, { color: "var(--white)", duration: 0.1 });
-    } else {
-      gsap.to(upArrow, {
-        color: originalColor,
-        duration: 0.1,
-      });
-    }
-  });
 });
 
 // footer line animation//
