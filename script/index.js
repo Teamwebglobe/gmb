@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let progressBar = document.querySelector(".progress-bar");
   let loaderWrapper = document.querySelector(".loader-wrapper");
 
+  // Disable scrolling while loader is running
+  document.body.style.overflow = "hidden";
+
   let loadProgress = 0;
   let interval = setInterval(() => {
     loadProgress += 1;
@@ -15,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(interval);
       setTimeout(() => {
         loaderWrapper.classList.add("hide-loader"); // Hide the loader
+
+        // Enable scrolling again
+        document.body.style.overflow = "auto";
 
         // Play GSAP animation after loader is hidden
         gsap.from(".a1", {
