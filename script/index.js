@@ -53,45 +53,107 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // scroll to top upp arrow animations //
-document.querySelector(".up-arrow").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    let scrollValue = window.scrollY; // Get current scroll position
-    let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
-    // Ensures smooth transition from 0 to 180 degrees
+  const upArrow = document.querySelector(".up-arrow");
 
-    gsap.to(".up-arrow", {
-      rotate: rotation,
-      duration: 0.1, // Short duration to create scrub-like effect
-      ease: "none",
+  if (upArrow) {
+    // Scroll to top on click
+    upArrow.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
-  });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const footer = document.querySelector(".footer");
-  const upArrow = document.querySelector(".up-arrow i");
-  let originalColor = getComputedStyle(upArrow).color;
+    // Rotate up-arrow on scroll
+    window.addEventListener("scroll", function () {
+      let scrollValue = window.scrollY; // Get current scroll position
+      let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
 
-  window.addEventListener("scroll", function () {
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+      gsap.to(".up-arrow", {
+        rotate: rotation,
+        duration: 0.1, // Short duration to create scrub-like effect
+        ease: "none",
+      });
+    });
 
-    if (footerRect.top < windowHeight && footerRect.bottom > 0) {
-      gsap.to(upArrow, { color: "var(--white)", duration: 0.1 });
-    } else {
-      gsap.to(upArrow, {
-        color: originalColor,
-        duration: 0.1,
+    // Change up-arrow color when reaching footer
+    const footer = document.querySelector(".footer");
+    const upArrowIcon = document.querySelector(".up-arrow i");
+
+    if (footer && upArrowIcon) {
+      let originalColor = getComputedStyle(upArrowIcon).color;
+
+      window.addEventListener("scroll", function () {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (footerRect.top < windowHeight && footerRect.bottom > 0) {
+          gsap.to(upArrowIcon, { color: "var(--white)", duration: 0.1 });
+        } else {
+          gsap.to(upArrowIcon, { color: originalColor, duration: 0.1 });
+        }
       });
     }
-  });
+  }
+});
+
+//section4 svg animation index//
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const section4 = document.querySelector(".section4");
+
+  if (section4) {
+    gsap.to(".section4", {
+      scrollTrigger: {
+        trigger: ".section4",
+        start: "50px 100px",
+        pin: true,
+      },
+    });
+
+    const svgPaths = document.querySelectorAll(".section4 svg path");
+
+    if (svgPaths.length > 0) {
+      gsap.fromTo(
+        svgPaths,
+        { strokeDasharray: 3000, strokeDashoffset: -3000 }, // Start state
+        {
+          strokeDashoffset: 0, // Draw animation
+          duration: 3, // Animation duration
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".section4",
+            start: "top center",
+          },
+        }
+      );
+    }
+  }
+});
+
+// service page animation//
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (window.innerWidth > 991) {
+    // Adjust breakpoint as needed
+    const contents = gsap.utils.toArray(
+      ".section2-services .service-container"
+    );
+
+    gsap.to(contents, {
+      xPercent: -88 * (contents.length - 1),
+      scrollTrigger: {
+        trigger: ".section2-services",
+        start: "42% center",
+        pin: true,
+        scrub: 1,
+      },
+    });
+  }
 });
 
 // footer line animation//
@@ -108,63 +170,74 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //swiper//
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 2.5,
-      spaceBetween: 50,
-    },
-  },
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperContainer = document.querySelector(".mySwiper");
+
+  if (swiperContainer) {
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 50,
+        },
+      },
+    });
+  }
 });
 
 //service - swiper //
+document.addEventListener("DOMContentLoaded", function () {
+  const serviceSwiperContainer = document.querySelector(".serviceSwiper");
 
-var newSwiper = new Swiper(".serviceSwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  loop: false,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".new-next", // Unique selectors
-    prevEl: ".new-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-  },
+  if (serviceSwiperContainer) {
+    var newSwiper = new Swiper(".serviceSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: false,
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".new-next", // Unique selectors
+        prevEl: ".new-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 });

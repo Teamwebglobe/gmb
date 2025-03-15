@@ -36,24 +36,6 @@
       </div>
     </div> -->
 
-    <!--header2-->
-    <div class="header2-wrapper">
-      <i class="ph ph-x-circle"></i>
-      <h3>Navigations</h3>
-      <ul class="header2-menus">
-        <li><a href="#!"> Home </a></li>
-        <li><a href="#!"> About Us </a></li>
-        <li><a href="#!"> Services </a></li>
-        <li><a href="#!"> Blogs </a></li>
-        <li><a href="#!"> Contact Us </a></li>
-      </ul>
-      <div class="socials">
-        <a href="#!"> Instagram</a>
-        <a href="#!"> Facebook</a>
-        <a href="#!"> LinkedIn</a>
-      </div>
-    </div>
-
     <!--header1-->
     <div class="header1-wrapper">
       <div class="header1 container">
@@ -62,15 +44,15 @@
         </div>
         <div class="menus col-6">
           <ul>
-            <li><a href="#!"> Home </a></li>
-            <li><a href="#!"> About Us </a></li>
-            <li><a href="#!"> Services </a></li>
-            <li><a href="#!"> Blogs </a></li>
-            <li><a href="#!"> Contact Us </a></li>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About Us </a></li>
+            <li><a href="services.html"> Services </a></li>
+            <!-- <li><a href="#!"> Blogs </a></li> -->
+            <li><a href="contact.html"> Contact Us </a></li>
           </ul>
         </div>
         <div class="header-btn col-3">
-          <a href="#!" class="btns"> Get Started </a>
+          <a href="contact.html" class="btns"> Get Started </a>
           <div class="menu-bar">
             <i class="ph ph-list"></i>
           </div>
@@ -78,11 +60,29 @@
       </div>
     </div>
 
+    <!--header2-->
+    <div class="header2-wrapper">
+      <i class="ph ph-x-circle"></i>
+      <h3>Navigations</h3>
+      <ul class="header2-menus">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about.html"> About Us </a></li>
+        <li><a href="services.html"> Services </a></li>
+        <!-- <li><a href="#!"> Blogs </a></li> -->
+        <li><a href="contact.html"> Contact Us </a></li>
+      </ul>
+      <div class="socials">
+        <a href="#!"> Instagram</a>
+        <a href="#!"> Facebook</a>
+        <a href="#!"> LinkedIn</a>
+      </div>
+    </div>
+
     <!-- contact content start -->
 
     <div class="contact-header">
       <div
-        class="sub-contact-header col-6 gap-1 d-flex flex-column align-items-center"
+        class="sub-contact-header col-12 col-xl-6 gap-1 d-flex flex-column align-items-center"
       >
         <h2>GET IN TOUCH</h2>
         <p>
@@ -93,8 +93,8 @@
     </div>
 
     <div class="container mt-5 pb-5">
-      <div class="row">
-        <div class="col-md-7">
+      <div class="row m-0">
+        <div class="col-lg-7 order-2 order-xl-1">
           <form class="contact-form">
             <div class="row mb-3">
               <div class="col-md-6">
@@ -150,8 +150,8 @@
             <button type="submit" class="btns">Send message</button>
           </form>
         </div>
-        <div class="col-md-5">
-          <div class="ps-3">
+        <div class="col-lg-5 mb-5 mb-xl-0 order-1 order-xl-2">
+          <div class="ps-0 ps-lg-3">
             <div class="contact-info d-flex flex-column gap-4">
               <a href="#" class="d-flex align-items-center gap-3"
                 ><i class="ph ph-envelope" style="font-size: 22px"></i
@@ -196,14 +196,14 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-head">
-            <div class="col-8">
+            <div class="col-12 col-xl-8">
               <h2>
                 Increase your client base and scale your business. <br />
                 Try it today !
               </h2>
             </div>
             <div class="footer-btn">
-              <a href="#!" class="btns"> Get Started </a>
+              <a href="contact.html" class="btns"> Get Started </a>
             </div>
           </div>
           <div class="socials-copy">
@@ -239,20 +239,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      // footer line animation//
-      document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
-
-        ScrollTrigger.create({
-          trigger: ".footer",
-          start: "10% center",
-          once: true,
-          toggleClass: { targets: ".divider", className: "show-divider" }, // Automatically toggle class
-        });
-      });
-    </script>
 
     <!--js bootstrap-->
     <script

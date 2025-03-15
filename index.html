@@ -35,24 +35,6 @@
       </div>
     </div>
 
-    <!--header2-->
-    <div class="header2-wrapper">
-      <i class="ph ph-x-circle"></i>
-      <h3>Navigations</h3>
-      <ul class="header2-menus">
-        <li><a href="index.html"> Home </a></li>
-        <li><a href="about.html"> About Us </a></li>
-        <li><a href="services.html"> Services </a></li>
-        <!-- <li><a href="#!"> Blogs </a></li> -->
-        <li><a href="contact.html"> Contact Us </a></li>
-      </ul>
-      <div class="socials">
-        <a href="#!"> Instagram</a>
-        <a href="#!"> Facebook</a>
-        <a href="#!"> LinkedIn</a>
-      </div>
-    </div>
-
     <!--up-arrow-->
     <div class="up-arrow a1">
       <i class="ph-light ph-arrow-circle-down"></i>
@@ -88,6 +70,24 @@
             <i class="ph ph-list"></i>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!--header2-->
+    <div class="header2-wrapper">
+      <i class="ph ph-x-circle"></i>
+      <h3>Navigations</h3>
+      <ul class="header2-menus">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about.html"> About Us </a></li>
+        <li><a href="services.html"> Services </a></li>
+        <!-- <li><a href="#!"> Blogs </a></li> -->
+        <li><a href="contact.html"> Contact Us </a></li>
+      </ul>
+      <div class="socials">
+        <a href="#!"> Instagram</a>
+        <a href="#!"> Facebook</a>
+        <a href="#!"> LinkedIn</a>
       </div>
     </div>
 
@@ -533,35 +533,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      // section4 svg animation//
-      document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.to(".section4", {
-          scrollTrigger: {
-            trigger: ".section4",
-            start: "50px 100px ",
-            pin: true,
-          },
-        });
-
-        gsap.fromTo(
-          ".section4 svg path",
-          { strokeDasharray: 3000, strokeDashoffset: -3000 }, // Start state
-          {
-            strokeDashoffset: 0, // Draw animation
-            duration: 3, // Animation duration
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: ".section4",
-              start: "top center",
-            },
-          }
-        );
-      });
-    </script>
 
     <!--js bootstrap-->
     <script

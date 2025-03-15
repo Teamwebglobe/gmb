@@ -98,6 +98,9 @@
 .section4-about .section2-about {
   background-color: transparent;
 }
+.section4-about .section2-about {
+  padding: 0;
+}
 
 .section4-about .head2 {
   color: var(--text);
@@ -250,4 +253,106 @@
   color: var(--white);
   width: 70%;
   font-weight: 300;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  /*section2-about*/
+
+  .section2-about {
+    margin-bottom: 4em;
+  }
+
+  /*section3-about*/
+
+  .section3-about {
+    margin-bottom: 4em;
+  }
+
+  .section3-about .bento-box {
+    padding: 2em;
+    margin-bottom: 1em;
+  }
+
+  .section3-about .bento .head2 {
+    font-size: 32px;
+  }
+
+  .section3-about .bento .img-cont {
+    height: 320px;
+  }
+
+  /*section4-about*/
+
+  /*section5-about*/
+  .section5-about {
+    margin: 0em 0em 4em 0em;
+  }
+
+  .section5-about .content p {
+    width: 100%;
+  }
+
+  .section5-about-img img {
+    display: none;
+  }
+
+  .section5-about svg {
+    display: none;
+  }
+
+  /*section6-about*/
+
+  .section6-about {
+    margin-bottom: 4em;
+  }
+
+  .section6-about .swiper-wrapper {
+    padding-left: 0vw;
+  }
+
+  .section6-about .testimonial-card {
+    padding: 2em;
+    height: 100%;
+  }
+
+  .section6-about .head-row {
+    margin-bottom: 1.5em;
+  }
+
+  /*section7-about*/
+
+  .section7-about .head-row {
+    align-items: start;
+  }
+
+  .section7-about-content h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .section7-about-content p {
+    width: 100%;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

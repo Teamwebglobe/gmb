@@ -1205,6 +1205,24 @@ html {
   .footer-contact a {
     line-height: 30px;
   }
+
+  /*service pages form */
+  /*section5-health*/
+
+  .section5-health {
+    padding: 0em;
+    margin-bottom: 4em;
+  }
+
+  .section5-health-content {
+    padding-right: 0em;
+    margin-bottom: 4em;
+  }
+  .section5-health h2 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 0.5em;
+  }
 }
 
 /*mobile devices*/

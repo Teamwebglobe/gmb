@@ -1,57 +1,10 @@
-.head1 {
-  color: var(--restaurants);
-}
-
-.loader-wrapper {
-  background-color: var(--restaurants);
-}
-
-.header1 .menus ul li a:hover {
-  color: var(--restaurants);
-}
-
-.btns {
-  border-color: var(--restaurants);
-}
-
-.btns:hover {
-  border-color: var(--restaurants);
-}
-
-.btns::before {
-  background-color: var(--restaurants);
-}
-
-.health-tag-header {
-  background-color: var(--restaurants);
-}
-
-/*section1-health*/
-
-.section1-health {
-  height: 100vh;
-  margin-bottom: 6em;
-}
-
-.section1-health .col-6 {
-  padding: 0;
-}
-
-.section1-health-content {
-  padding: 5vw;
-  background-color: var(--color4);
-  height: 100%;
-  width: 100%;
-}
 .section1-health-content h1 {
   font-size: 50px;
   font-weight: 500;
-  color: var(--text);
   margin-bottom: 2em;
 }
 
 .section1-health-content p {
-  color: var(--text);
   font-size: 16px;
   line-height: 28px;
   width: 80%;
@@ -80,25 +33,12 @@
 }
 
 .section3-row-2 .card-wrapper {
-  background-color: var(--white);
   border: 1px solid var(--color5);
   border-radius: 20px;
 }
 
 .section3-row-2 .col-4:nth-child(2) .card-wrapper {
-  background-color: var(--restaurants);
-  color: var(--white);
   border: none;
-}
-
-.section3-row-2 .col-4:nth-child(2) .card-wrapper span {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-.section3-row-2 .card-wrapper span {
-  border-color: var(--restaurants);
-  color: var(--restaurants);
 }
 
 /*secton3-health*/
@@ -107,16 +47,10 @@
 .service-process {
   margin-bottom: 6em;
   padding: 4em 0em;
-  background-color: var(--restaurants);
 }
 
 .service-process .swiper-wrapper {
   padding-left: 7vw;
-}
-
-.service-process .head1,
-.service-process .head2 {
-  color: var(--white);
 }
 
 .swiper-btns {
@@ -129,7 +63,6 @@
   position: relative !important;
   width: fit-content !important;
   margin: 0 !important;
-  color: var(--restaurants) !important;
 }
 
 .swiper-button-prev:after,
@@ -141,12 +74,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--white);
 }
 
 .process-card {
   height: 500px;
-  background-color: var(--white);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -157,6 +88,27 @@
 }
 
 .process-card span {
+  color: var(--white);
+}
+
+/*section1-health*/
+
+.section1-health {
+  height: 100vh;
+  margin-bottom: 6em;
+}
+
+.section1-health .section1-health-box {
+  padding: 0;
+}
+
+.section1-health-content {
+  padding: 5vw;
+  height: 100%;
+  width: 100%;
+}
+
+.process-card span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,8 +116,6 @@
   height: 40px;
   border-radius: 50%;
   font-size: 20px;
-  background-color: var(--restaurants);
-  color: var(--white);
   margin-bottom: 1em;
 }
 
@@ -190,7 +140,71 @@
   left: 0;
 }
 
-/*section4-health*/
-.section8 .accordion {
-  --bs-accordion-active-color: var(--restaurants);
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  /*section1-health*/
+
+  .section1-health {
+    height: 100%;
+    margin-bottom: 4em;
+  }
+
+  .section1-health-content {
+    padding: 10vw 4vw;
+  }
+  .section1-health-content h1 {
+    font-size: 32px;
+    margin-bottom: 1em;
+    line-height: 48px;
+  }
+
+  .section1-health-content p {
+    width: 100%;
+  }
+
+  /*section2-health*/
+
+  .section2-health {
+    margin-bottom: 4em;
+  }
+
+  .section2-health .btns {
+    margin-top: 1em;
+  }
+
+  .section2-health p {
+    margin-bottom: 1em;
+  }
+
+  /*secton3-health*/
+  /*section6-about*/
+
+  .service-process {
+    margin-bottom: 4em;
+  }
+
+  .service-process .swiper-wrapper {
+    padding-left: 0vw;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

@@ -29,9 +29,122 @@
 
     <!--css-->
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/healthcare.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/servicesall.css" />
   </head>
+  <style>
+    .head1 {
+      color: var(--health);
+    }
+
+    .loader-wrapper {
+      background-color: var(--health);
+    }
+
+    .header1 .menus ul li a:hover {
+      color: var(--health);
+    }
+
+    .btns {
+      border-color: var(--health);
+    }
+
+    .btns:hover {
+      border-color: var(--health);
+    }
+
+    .btns::before {
+      background-color: var(--health);
+    }
+
+    .health-tag-header {
+      background-color: var(--health);
+    }
+
+    .section1-health-content {
+      background-image: url("./images/health-bg-1.jpg");
+      background-size: cover;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+
+    .section1-health-content h1 {
+      color: var(--white);
+    }
+
+    .section1-health-content p {
+      color: var(--white);
+    }
+
+    .section3-row-2 .card-wrapper {
+      background-color: var(--white);
+    }
+
+    .section3-row-2 .col-4:nth-child(2) .card-wrapper {
+      background-color: var(--health);
+      color: var(--white);
+    }
+
+    .section3-row-2 .col-4:nth-child(2) .card-wrapper span {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    .section3-row-2 .card-wrapper span {
+      border-color: var(--health);
+      color: var(--health);
+    }
+
+    /*secton3-health*/
+    /*section6-about*/
+
+    .service-process {
+      background-image: url("./images/health-bg-1.jpg");
+      background-size: cover;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+
+    .service-process .head1,
+    .service-process .head2 {
+      color: var(--white);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: var(--health) !important;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      background-color: var(--white);
+    }
+
+    .process-card {
+      background-color: var(--white);
+    }
+
+    .process-card span {
+      background-color: var(--health);
+      color: var(--white);
+    }
+
+    /*section5-health*/
+
+    .section5-health .btns {
+      background-color: var(--health);
+      border-color: var(--health);
+    }
+
+    /*section4-health*/
+    .section8 .accordion {
+      --bs-accordion-active-color: var(--health);
+    }
+
+    .section5-health h2 span {
+      color: var(--health);
+    }
+  </style>
   <body>
     <!-- Loader -->
     <div class="loader-wrapper">
@@ -40,24 +153,6 @@
       </p>
       <div class="bar-loader">
         <div class="progress-bar"></div>
-      </div>
-    </div>
-
-    <!--header2-->
-    <div class="header2-wrapper">
-      <i class="ph ph-x-circle"></i>
-      <h3>Navigations</h3>
-      <ul class="header2-menus">
-        <li><a href="#!"> Home </a></li>
-        <li><a href="#!"> About Us </a></li>
-        <li><a href="#!"> Services </a></li>
-        <li><a href="#!"> Blogs </a></li>
-        <li><a href="#!"> Contact Us </a></li>
-      </ul>
-      <div class="socials">
-        <a href="#!"> Instagram</a>
-        <a href="#!"> Facebook</a>
-        <a href="#!"> LinkedIn</a>
       </div>
     </div>
 
@@ -83,15 +178,15 @@
         </div>
         <div class="menus col-6">
           <ul>
-            <li><a href="#!"> Home </a></li>
-            <li><a href="#!"> About Us </a></li>
-            <li><a href="#!"> Services </a></li>
-            <li><a href="#!"> Blogs </a></li>
-            <li><a href="#!"> Contact Us </a></li>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About Us </a></li>
+            <li><a href="services.html"> Services </a></li>
+            <!-- <li><a href="#!"> Blogs </a></li> -->
+            <li><a href="contact.html"> Contact Us </a></li>
           </ul>
         </div>
         <div class="header-btn col-3">
-          <a href="#!" class="btns"> Get Started </a>
+          <a href="contact.html" class="btns"> Get Started </a>
           <div class="menu-bar">
             <i class="ph ph-list"></i>
           </div>
@@ -99,10 +194,28 @@
       </div>
     </div>
 
+    <!--header2-->
+    <div class="header2-wrapper">
+      <i class="ph ph-x-circle"></i>
+      <h3>Navigations</h3>
+      <ul class="header2-menus">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about.html"> About Us </a></li>
+        <li><a href="services.html"> Services </a></li>
+        <!-- <li><a href="#!"> Blogs </a></li> -->
+        <li><a href="contact.html"> Contact Us </a></li>
+      </ul>
+      <div class="socials">
+        <a href="#!"> Instagram</a>
+        <a href="#!"> Facebook</a>
+        <a href="#!"> LinkedIn</a>
+      </div>
+    </div>
+
     <!--section1-health-->
     <div class="section1-health">
       <div class="row m-0">
-        <div class="col-6">
+        <div class="col-12 col-xl-6 section1-health-box">
           <div class="section1-health-content">
             <h1>
               Local SEO & GMB Optimization for Doctor Clinics & Healthcare
@@ -118,7 +231,7 @@
           </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-12 col-xl-6 section1-health-box">
           <img
             src="./images/health1.jpg"
             class="img-fluid"
@@ -134,7 +247,7 @@
       <div class="section2-about">
         <div class="container">
           <div class="row head-row align-items-start">
-            <div class="col-5">
+            <div class="col-12 col-xl-5">
               <p class="head1">Why GMB ?</p>
               <h3 class="head2">
                 Boost Your Clinic’s Growth with Expert GMB Optimization.
@@ -142,7 +255,7 @@
               <a href="#!" class="btns"> Get in Touch </a>
             </div>
 
-            <div class="col-6 about-content">
+            <div class="col-12 col-xl-6 about-content">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus vel accusamus consectetur minima delectus blanditiis,
@@ -165,8 +278,8 @@
               </p>
             </div>
           </div>
-          <div class="row section3-row-2">
-            <div class="col-4">
+          <div class="row section3-row-2 g-4">
+            <div class="col-12 col-xl-4">
               <div class="card-wrapper">
                 <span>1</span>
                 <div class="card-contents">
@@ -179,7 +292,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-xl-4">
               <div class="card-wrapper">
                 <span>2</span>
                 <div class="card-contents">
@@ -192,7 +305,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-xl-4">
               <div class="card-wrapper">
                 <span>3</span>
                 <div class="card-contents">
@@ -215,16 +328,18 @@
     <div class="service-process">
       <div class="swiper serviceSwiper">
         <div class="head-row container">
-          <div class="swiper-head col-6">
+          <div class="swiper-head col-12 col-xl-6">
             <p class="head1">Our Process</p>
             <h2 class="head2">
               Boost your clinic's visibility with expert Local SEO & GMB
             </h2>
           </div>
           <!-- Swiper Navigation Buttons -->
-          <div class="swiper-btns">
-            <div class="swiper-button-prev new-prev"></div>
-            <div class="swiper-button-next new-next"></div>
+          <div class="d-none d-xl-block">
+            <div class="swiper-btns">
+              <div class="swiper-button-prev new-prev"></div>
+              <div class="swiper-button-next new-next"></div>
+            </div>
           </div>
         </div>
         <div class="swiper-wrapper">
@@ -337,6 +452,12 @@
             </div>
           </div>
         </div>
+        <div class="d-block d-xl-none py-5">
+          <div class="swiper-btns">
+            <div class="swiper-button-prev new-prev"></div>
+            <div class="swiper-button-next new-next"></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -344,13 +465,13 @@
     <!--section8-->
     <div class="section8 container">
       <div class="row head-row">
-        <div class="col-5">
+        <div class="col-12 col-xl-5">
           <p class="head1">FAQs</p>
           <h2 class="head2">Quick Answers to Common Questions!</h2>
           <a href="#!" class="btns"> Get a proposal</a>
         </div>
 
-        <div class="col-6">
+        <div class="col-12 col-xl-6">
           <div class="accordion faqs" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -472,9 +593,12 @@
     <!--section7-->
     <div class="section5-health">
       <div class="container">
-        <div class="row">
-          <div class="col-6 section5-health-content">
-            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+        <div class="row m-0">
+          <div class="col-12 col-xl-6 section5-health-content">
+            <h2>
+              Lorem ipsum dolor sit amet
+              <span>consectetur, adipisicing elit.</span>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
               sapiente a quasi eaque odio deserunt, qui pariatur, fuga itaque
@@ -482,7 +606,7 @@
               numquam. Eaque, beatae est.
             </p>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-xl-6">
             <form class="contact-form">
               <div class="row mb-3">
                 <div class="col-md-6">
@@ -547,14 +671,14 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-head">
-            <div class="col-8">
+            <div class="col-12 col-xl-8">
               <h2>
                 Increase your client base and scale your business. <br />
                 Try it today !
               </h2>
             </div>
             <div class="footer-btn">
-              <a href="#!" class="btns"> Get Started </a>
+              <a href="contact.html" class="btns"> Get Started </a>
             </div>
           </div>
           <div class="socials-copy">
@@ -590,51 +714,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      document
-        .querySelector(".up-arrow")
-        .addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        window.addEventListener("scroll", function () {
-          let scrollValue = window.scrollY; // Get current scroll position
-          let rotation = gsap.utils.clamp(0, 180, (scrollValue / 500) * 180);
-          // Ensures smooth transition from 0 to 180 degrees
-
-          gsap.to(".up-arrow", {
-            rotate: rotation,
-            duration: 0.1, // Short duration to create scrub-like effect
-            ease: "none",
-          });
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const footer = document.querySelector(".footer");
-        const upArrow = document.querySelector(".up-arrow i");
-        let originalColor = getComputedStyle(upArrow).color;
-
-        window.addEventListener("scroll", function () {
-          const footerRect = footer.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-
-          if (footerRect.top < windowHeight && footerRect.bottom > 0) {
-            gsap.to(upArrow, { color: "var(--white)", duration: 0.1 });
-          } else {
-            gsap.to(upArrow, {
-              color: originalColor,
-              duration: 0.1,
-            });
-          }
-        });
-      });
-    </script>
 
     <!--js bootstrap-->
     <script
