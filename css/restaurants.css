@@ -1,29 +1,29 @@
 .head1 {
-  color: var(--health);
+  color: var(--restaurants);
 }
 
 .loader-wrapper {
-  background-color: var(--health);
+  background-color: var(--restaurants);
 }
 
 .header1 .menus ul li a:hover {
-  color: var(--health);
+  color: var(--restaurants);
 }
 
 .btns {
-  border-color: var(--health);
+  border-color: var(--restaurants);
 }
 
 .btns:hover {
-  border-color: var(--health);
+  border-color: var(--restaurants);
 }
 
 .btns::before {
-  background-color: var(--health);
+  background-color: var(--restaurants);
 }
 
 .health-tag-header {
-  background-color: var(--health);
+  background-color: var(--restaurants);
 }
 
 /*section1-health*/
@@ -39,22 +39,19 @@
 
 .section1-health-content {
   padding: 5vw;
-  background-image: url("../images/health-bg-1.jpg");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
+  background-color: var(--color4);
   height: 100%;
   width: 100%;
 }
 .section1-health-content h1 {
   font-size: 50px;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text);
   margin-bottom: 2em;
 }
 
 .section1-health-content p {
-  color: var(--white);
+  color: var(--text);
   font-size: 16px;
   line-height: 28px;
   width: 80%;
@@ -89,7 +86,7 @@
 }
 
 .section3-row-2 .col-4:nth-child(2) .card-wrapper {
-  background-color: var(--health);
+  background-color: var(--restaurants);
   color: var(--white);
   border: none;
 }
@@ -100,8 +97,8 @@
 }
 
 .section3-row-2 .card-wrapper span {
-  border-color: var(--health);
-  color: var(--health);
+  border-color: var(--restaurants);
+  color: var(--restaurants);
 }
 
 /*secton3-health*/
@@ -110,10 +107,7 @@
 .service-process {
   margin-bottom: 6em;
   padding: 4em 0em;
-  background-image: url("../images/health-bg-1.jpg");
-  background-size: cover;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  background-color: var(--restaurants);
 }
 
 .service-process .swiper-wrapper {
@@ -135,7 +129,7 @@
   position: relative !important;
   width: fit-content !important;
   margin: 0 !important;
-  color: var(--health) !important;
+  color: var(--restaurants) !important;
 }
 
 .swiper-button-prev:after,
@@ -170,7 +164,7 @@
   height: 40px;
   border-radius: 50%;
   font-size: 20px;
-  background-color: var(--health);
+  background-color: var(--restaurants);
   color: var(--white);
   margin-bottom: 1em;
 }
@@ -195,14 +189,8 @@
   top: 0;
   left: 0;
 }
-/*section5-health*/
-
-.section5-health .btns {
-  background-color: var(--health);
-  border-color: var(--health);
-}
 
 /*section4-health*/
 .section8 .accordion {
-  --bs-accordion-active-color: var(--health);
+  --bs-accordion-active-color: var(--restaurants);
 }

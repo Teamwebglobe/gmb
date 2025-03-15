@@ -13,6 +13,9 @@
   --black: #000000;
   --color6: #5f5f5f;
   --health: #3385e8;
+  --restaurants: #d9a657;
+  --karaoke: #f40989;
+  --auto: #db2411;
   --white: #ffffff;
   --axiforma: "Axiform", sans-serif;
   --poppins: "Poppins", sans-serif;
@@ -852,6 +855,44 @@ html {
 .footer-contact a:hover {
   color: var(--primary);
   transition: 0.5s;
+}
+
+/*service pages form */
+/*section5-health*/
+
+.section5-health {
+  padding: 4em 0em;
+  color: var(--text);
+}
+
+.section5-health-content {
+  padding-right: 5em;
+}
+.section5-health h2 {
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 0.5em;
+}
+
+.section5-health p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section5-health .contact-form input {
+  margin-bottom: 3em;
+  background-color: transparent;
+  border: none;
+}
+
+.section5-health .contact-form textarea {
+  background-color: transparent !important;
+  border: none;
+}
+
+.section5-health .contact-form label {
+  margin-bottom: 1em !important;
+  font-size: 20px;
 }
 
 /*responsive*/

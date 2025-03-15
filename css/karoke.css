@@ -1,29 +1,39 @@
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header1 .logo p {
+  color: var(--text);
+}
+
 .head1 {
-  color: var(--health);
+  color: var(--karaoke);
 }
 
 .loader-wrapper {
-  background-color: var(--health);
+  background-color: var(--karaoke);
 }
 
 .header1 .menus ul li a:hover {
-  color: var(--health);
+  color: var(--karaoke);
 }
 
 .btns {
-  border-color: var(--health);
+  color: var(--black);
+  border-color: var(--karaoke);
 }
 
 .btns:hover {
-  border-color: var(--health);
+  border-color: var(--karaoke);
 }
 
 .btns::before {
-  background-color: var(--health);
+  background-color: var(--karaoke);
 }
 
 .health-tag-header {
-  background-color: var(--health);
+  background-color: var(--karaoke);
 }
 
 /*section1-health*/
@@ -39,10 +49,7 @@
 
 .section1-health-content {
   padding: 5vw;
-  background-image: url("../images/health-bg-1.jpg");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
+  background-color: var(--black);
   height: 100%;
   width: 100%;
 }
@@ -51,6 +58,10 @@
   font-weight: 500;
   color: var(--white);
   margin-bottom: 2em;
+}
+
+.section1-health-content h1 span {
+  color: var(--karaoke);
 }
 
 .section1-health-content p {
@@ -75,6 +86,11 @@
 
 .section2-health .btns {
   margin-top: 2em;
+  color: var(--white);
+}
+
+.section2-health .head2 {
+  color: var(--white);
 }
 
 .section2-health p {
@@ -82,14 +98,16 @@
   line-height: 28px;
 }
 
+/*section3*/
+
 .section3-row-2 .card-wrapper {
-  background-color: var(--white);
+  background-color: var(--black);
   border: 1px solid var(--color5);
   border-radius: 20px;
 }
 
 .section3-row-2 .col-4:nth-child(2) .card-wrapper {
-  background-color: var(--health);
+  background-color: var(--karaoke);
   color: var(--white);
   border: none;
 }
@@ -100,8 +118,8 @@
 }
 
 .section3-row-2 .card-wrapper span {
-  border-color: var(--health);
-  color: var(--health);
+  border-color: var(--karaoke);
+  color: var(--karaoke);
 }
 
 /*secton3-health*/
@@ -110,10 +128,7 @@
 .service-process {
   margin-bottom: 6em;
   padding: 4em 0em;
-  background-image: url("../images/health-bg-1.jpg");
-  background-size: cover;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  background-color: var(--black);
 }
 
 .service-process .swiper-wrapper {
@@ -135,7 +150,7 @@
   position: relative !important;
   width: fit-content !important;
   margin: 0 !important;
-  color: var(--health) !important;
+  color: var(--karaoke) !important;
 }
 
 .swiper-button-prev:after,
@@ -152,7 +167,7 @@
 
 .process-card {
   height: 500px;
-  background-color: var(--white);
+  border: 1px solid var(--white);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -170,7 +185,7 @@
   height: 40px;
   border-radius: 50%;
   font-size: 20px;
-  background-color: var(--health);
+  background-color: var(--karaoke);
   color: var(--white);
   margin-bottom: 1em;
 }
@@ -179,11 +194,14 @@
   font-size: 22px;
   line-height: 36px;
   font-weight: 600;
+  color: var(--karaoke);
 }
 
 .process-card p {
   font-size: 16px;
   line-height: 28px;
+  color: var(--white);
+  font-weight: 300;
 }
 
 .process-card img {
@@ -195,14 +213,52 @@
   top: 0;
   left: 0;
 }
-/*section5-health*/
-
-.section5-health .btns {
-  background-color: var(--health);
-  border-color: var(--health);
-}
 
 /*section4-health*/
+.section8 .head2,
+.section8 .btns {
+  color: var(--white);
+}
+
 .section8 .accordion {
-  --bs-accordion-active-color: var(--health);
+  --bs-accordion-active-color: var(--karaoke);
+}
+
+.section8 .accordion button,
+.section8 .accordion p {
+  color: var(--white);
+}
+
+/*section5-health*/
+.section5-health,
+.section5-health .btns {
+  background-color: var(--black);
+  color: var(--white) !important;
+}
+
+.section5-health input::placeholder {
+  color: var(--white);
+}
+
+.section5-health input,
+.section5-health textarea {
+  border-color: var(--white) !important;
+}
+
+.section5-health textarea::placeholder {
+  color: var(--white);
+}
+
+.section5-health h2 {
+  color: var(--karaoke);
+}
+
+.contact-form {
+  caret-color: var(--karaoke);
+}
+
+input,
+textarea {
+  color: var(--white) !important;
+  background-color: transparent !important;
 }
