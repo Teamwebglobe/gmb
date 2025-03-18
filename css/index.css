@@ -620,7 +620,7 @@ html {
   background-size: cover;
   background-position: left top;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 6em;
 }
 
