@@ -301,14 +301,14 @@ html {
   flex-direction: column;
   gap: 0.8em;
   border-bottom: 1px solid var(--white);
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
   margin: 2.5em 0em;
 }
 
 .header2-menus a {
   text-decoration: none;
   color: var(--white);
-  font-size: 38px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -322,7 +322,7 @@ html {
   position: absolute;
   top: 24px;
   right: 20px;
-  font-size: 42px;
+  font-size: 32px;
   color: var(--white);
   cursor: pointer;
 }
@@ -772,6 +772,7 @@ html {
   min-height: 100vh;
   color: var(--white);
   padding-top: 12em;
+  padding-bottom: 4em;
   background-color: var(--black);
 }
 
@@ -907,6 +908,10 @@ html {
 
   .header-btn .btns {
     display: none;
+  }
+
+  .header1 .logo p {
+    font-size: 26px;
   }
 
   /*header2*/
@@ -1227,6 +1232,9 @@ html {
 
 /*mobile devices*/
 @media (max-width: 575.98px) {
+  .section4 svg {
+    display: none;
+  }
 }
 
 /*table devices*/
@@ -1341,6 +1349,11 @@ html {
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {
+  /*section4*/
+  .section4-content p::before,
+  .section4-content p::after {
+    display: none;
+  }
 }
 
 /*extra large desktop devices */

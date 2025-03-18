@@ -192,6 +192,9 @@
 
 /*mobile devices*/
 @media (max-width: 575.98px) {
+  .serviceSwiper {
+    padding: 0em 1em;
+  }
 }
 
 /*table devices*/
@@ -200,6 +203,9 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .section1-health {
+    height: 100%;
+  }
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {

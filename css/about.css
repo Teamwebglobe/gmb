@@ -153,14 +153,14 @@
   height: fit-content;
 }
 
-.section5-about svg {
+/* .section5-about svg {
   position: absolute;
   top: 0;
   right: 0;
   width: 55%;
   height: fit-content;
   transform: rotate(-180deg);
-}
+} */
 
 /*section6-about*/
 
@@ -351,6 +351,11 @@
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {
+  /*section5-about*/
+
+  .section5-about-img img {
+    right: 8%;
+  }
 }
 
 /*extra large desktop devices */

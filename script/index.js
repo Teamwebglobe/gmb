@@ -144,14 +144,39 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
+  // if (window.innerWidth > 991) {
+  //   // Adjust breakpoint as needed
+  //   const contents = gsap.utils.toArray(
+  //     ".section2-services .service-container"
+  //   );
+
+  //   gsap.to(contents, {
+  //     xPercent: -88 * (contents.length - 1),
+  //     scrollTrigger: {
+  //       trigger: ".section2-services",
+  //       start: "42% center",
+  //       pin: true,
+  //       scrub: 1,
+  //     },
+  //   });
+  // }
   if (window.innerWidth > 991) {
-    // Adjust breakpoint as needed
     const contents = gsap.utils.toArray(
       ".section2-services .service-container"
     );
 
+    let xPercentValue;
+
+    if (window.innerWidth >= 992 && window.innerWidth <= 1191) {
+      xPercentValue = -100 * (contents.length - 1);
+    } else if (window.innerWidth >= 1192 && window.innerWidth <= 1366) {
+      xPercentValue = -95 * (contents.length - 1);
+    } else if (window.innerWidth >= 1500) {
+      xPercentValue = -88 * (contents.length - 1);
+    }
+
     gsap.to(contents, {
-      xPercent: -88 * (contents.length - 1),
+      xPercent: xPercentValue,
       scrollTrigger: {
         trigger: ".section2-services",
         start: "42% center",
@@ -218,10 +243,10 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 1,
       spaceBetween: 10,
       loop: false,
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -240,6 +265,10 @@ document.addEventListener("DOMContentLoaded", function () {
           spaceBetween: 30,
         },
         1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1500: {
           slidesPerView: 4,
           spaceBetween: 20,
         },
