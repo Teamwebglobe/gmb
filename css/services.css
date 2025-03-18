@@ -56,6 +56,7 @@
   border-color: var(--primary);
   margin-top: 1em;
   color: var(--white);
+  display: inline-block;
 }
 
 .service-container ul {
