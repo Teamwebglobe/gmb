@@ -1100,6 +1100,8 @@ html {
 
   /*section6*/
   .section6 {
+    height:100%;
+    padding:2em 0em;
     margin-bottom: 4em;
   }
 
