@@ -94,7 +94,7 @@
 /*section1-health*/
 
 .section1-health {
-  height: 100vh;
+  min-height: 100vh;
   margin-bottom: 6em;
 }
 

@@ -485,6 +485,12 @@ html {
   animation: draw 3s ease-in-out forwards; */
 }
 
+.section4 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section4-content {
   color: var(--white);
   text-align: center;

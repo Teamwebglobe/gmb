@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 10,
       loop: false,
       autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       },
       pagination: {

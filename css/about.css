@@ -148,7 +148,7 @@
 .section5-about-img img {
   position: absolute;
   bottom: 0;
-  right: 20%;
+  right: 10%;
   width: fit-content;
   height: fit-content;
 }
@@ -230,7 +230,7 @@
 /*section7-about*/
 .section7-about {
   background-color: var(--primary);
-  padding: 2em 0em;
+  padding: 2em 0em 1em 0em;
 }
 
 .section7-about .head-row {
@@ -238,7 +238,7 @@
 }
 
 .section7-about-content h2 {
-  font-size: 62px;
+  font-size: 64px;
   font-weight: 600;
   color: var(--white);
   margin-bottom: 0.5em;
@@ -251,8 +251,9 @@
 .section7-about-content p {
   font-size: 16px;
   color: var(--white);
-  width: 70%;
+  width: 85%;
   font-weight: 300;
+  margin-bottom: 1em;
 }
 
 /*responsive*/
