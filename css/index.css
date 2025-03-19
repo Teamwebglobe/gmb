@@ -622,6 +622,9 @@ html {
   background-attachment: fixed;
   min-height: 100vh;
   margin-bottom: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section6-container {
@@ -815,7 +818,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .divider {
@@ -1100,8 +1102,8 @@ html {
 
   /*section6*/
   .section6 {
-    height:100%;
-    padding:2em 0em;
+    height: 100%;
+    padding: 2em 0em;
     margin-bottom: 4em;
   }
 
@@ -1363,6 +1365,12 @@ html {
   .section4-content p::before,
   .section4-content p::after {
     display: none;
+  }
+
+  /*section6*/
+  .section6 {
+    height: 100%;
+    padding: 2em 0em;
   }
 }
 
