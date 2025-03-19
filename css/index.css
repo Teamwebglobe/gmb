@@ -234,11 +234,10 @@ html {
   align-items: center;
 }
 
-.logo p {
-  font-size: 32px;
-  font-weight: 600;
+.header1 img {
+  width: 200px;
+  object-fit: cover;
 }
-
 .menus {
   display: flex;
   justify-content: center;
@@ -270,6 +269,16 @@ html {
 
 .header-btn {
   text-align: end;
+}
+
+.header-btn .btns::before {
+  width: 450px;
+  height: 450px;
+}
+
+.header-btn .btns:hover::before {
+  top: -80px;
+  left: -80px;
 }
 
 /*side-header*/
@@ -419,11 +428,11 @@ html {
 .section2 {
   margin-bottom: 6em;
 }
-.section2 img {
+/* .section2 img {
   height: 90vh;
   object-fit: cover;
   width: 100%;
-}
+} */
 
 /*section3*/
 .section3 {
