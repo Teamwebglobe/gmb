@@ -365,6 +365,65 @@ html {
   cursor: pointer;
 }
 
+/*policy-contaienr*/
+.policy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.policy-container .policy-content {
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  padding: 2.5em;
+  font-family: var(--axiforma);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  overflow-y: scroll;
+}
+
+.policy-container .policy-content .ph-x-circle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.policy-container .policy-content .policy-head h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.policy-content .policy-intro h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.policy-content .policy-list h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.policy-content .policy-list .list-head {
+  margin-bottom: 1em;
+}
+
+.policy-content .policy-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 /*section1*/
 
 .section1 {

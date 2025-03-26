@@ -1,39 +1,39 @@
 // loader //
-document.addEventListener("DOMContentLoaded", function () {
-  let countElement = document.getElementById("count");
-  let progressBar = document.querySelector(".progress-bar");
-  let loaderWrapper = document.querySelector(".loader-wrapper");
+// document.addEventListener("DOMContentLoaded", function () {
+//   let countElement = document.getElementById("count");
+//   let progressBar = document.querySelector(".progress-bar");
+//   let loaderWrapper = document.querySelector(".loader-wrapper");
 
-  // Disable scrolling while loader is running
-  document.body.style.overflow = "hidden";
+//   // Disable scrolling while loader is running
+//   document.body.style.overflow = "hidden";
 
-  let loadProgress = 0;
-  let interval = setInterval(() => {
-    loadProgress += 1;
-    countElement.textContent =
-      loadProgress < 10 ? "0" + loadProgress : loadProgress;
-    progressBar.style.width = loadProgress + "%";
+//   let loadProgress = 0;
+//   let interval = setInterval(() => {
+//     loadProgress += 1;
+//     countElement.textContent =
+//       loadProgress < 10 ? "0" + loadProgress : loadProgress;
+//     progressBar.style.width = loadProgress + "%";
 
-    if (loadProgress >= 100) {
-      clearInterval(interval);
-      setTimeout(() => {
-        loaderWrapper.classList.add("hide-loader"); // Hide the loader
+//     if (loadProgress >= 100) {
+//       clearInterval(interval);
+//       setTimeout(() => {
+//         loaderWrapper.classList.add("hide-loader"); // Hide the loader
 
-        // Enable scrolling again
-        document.body.style.overflow = "auto";
+//         // Enable scrolling again
+//         document.body.style.overflow = "auto";
 
-        // Play GSAP animation after loader is hidden
-        gsap.from(".a1", {
-          y: 30,
-          opacity: 0,
-          stagger: 0.2,
-          duration: 0.5,
-          delay: 0.4,
-        });
-      }, 500); // Delay before hiding the loader
-    }
-  }, 20);
-});
+//         // Play GSAP animation after loader is hidden
+//         gsap.from(".a1", {
+//           y: 30,
+//           opacity: 0,
+//           stagger: 0.2,
+//           duration: 0.5,
+//           delay: 0.4,
+//         });
+//       }, 500); // Delay before hiding the loader
+//     }
+//   }, 20);
+// });
 
 //header//
 document.addEventListener("DOMContentLoaded", function () {
@@ -318,3 +318,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// policies//
