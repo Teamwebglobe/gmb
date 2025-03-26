@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollTrigger: {
         trigger: ".section4",
         start: "50px 100px",
-        pin: true,
+        pin: false,
       },
     });
 
