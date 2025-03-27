@@ -931,6 +931,7 @@ html {
 
 .footer-contact .copyright {
   color: var(--color3);
+  cursor: pointer;
 }
 
 .footer-contact a:hover {
