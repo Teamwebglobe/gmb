@@ -1,39 +1,39 @@
 // loader //
-// document.addEventListener("DOMContentLoaded", function () {
-//   let countElement = document.getElementById("count");
-//   let progressBar = document.querySelector(".progress-bar");
-//   let loaderWrapper = document.querySelector(".loader-wrapper");
+document.addEventListener("DOMContentLoaded", function () {
+  let countElement = document.getElementById("count");
+  let progressBar = document.querySelector(".progress-bar");
+  let loaderWrapper = document.querySelector(".loader-wrapper");
 
-//   // Disable scrolling while loader is running
-//   document.body.style.overflow = "hidden";
+  // Disable scrolling while loader is running
+  document.body.style.overflow = "hidden";
 
-//   let loadProgress = 0;
-//   let interval = setInterval(() => {
-//     loadProgress += 1;
-//     countElement.textContent =
-//       loadProgress < 10 ? "0" + loadProgress : loadProgress;
-//     progressBar.style.width = loadProgress + "%";
+  let loadProgress = 0;
+  let interval = setInterval(() => {
+    loadProgress += 1;
+    countElement.textContent =
+      loadProgress < 10 ? "0" + loadProgress : loadProgress;
+    progressBar.style.width = loadProgress + "%";
 
-//     if (loadProgress >= 100) {
-//       clearInterval(interval);
-//       setTimeout(() => {
-//         loaderWrapper.classList.add("hide-loader"); // Hide the loader
+    if (loadProgress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        loaderWrapper.classList.add("hide-loader"); // Hide the loader
 
-//         // Enable scrolling again
-//         document.body.style.overflow = "auto";
+        // Enable scrolling again
+        document.body.style.overflow = "auto";
 
-//         // Play GSAP animation after loader is hidden
-//         gsap.from(".a1", {
-//           y: 30,
-//           opacity: 0,
-//           stagger: 0.2,
-//           duration: 0.5,
-//           delay: 0.4,
-//         });
-//       }, 500); // Delay before hiding the loader
-//     }
-//   }, 20);
-// });
+        // Play GSAP animation after loader is hidden
+        gsap.from(".a1", {
+          y: 30,
+          opacity: 0,
+          stagger: 0.2,
+          duration: 0.5,
+          delay: 0.4,
+        });
+      }, 500); // Delay before hiding the loader
+    }
+  }, 20);
+});
 
 //header//
 document.addEventListener("DOMContentLoaded", function () {
@@ -320,3 +320,65 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // policies//
+document.addEventListener("DOMContentLoaded", function () {
+  let body = document.body;
+
+  // Get modals
+  let privacyPolicy = document.getElementById("privacy-policy");
+  let termsCondition = document.getElementById("terms-condition");
+
+  // Ensure both modals are hidden on page load
+  privacyPolicy.style.display = "none";
+  termsCondition.style.display = "none";
+
+  // Function to disable scrolling
+  function disableScroll() {
+    body.style.overflow = "hidden";
+  }
+
+  // Function to enable scrolling
+  function enableScroll() {
+    body.style.overflow = "";
+  }
+
+  // Function to toggle visibility of a modal
+  function toggleModal(modal, show) {
+    modal.style.display = show ? "block" : "none";
+
+    // Enable/Disable scrolling based on visibility
+    if (show) {
+      disableScroll();
+    } else {
+      enableScroll();
+    }
+  }
+
+  // Show Privacy Policy
+  document
+    .querySelector(".show-privacy")
+    .addEventListener("click", function () {
+      toggleModal(privacyPolicy, true);
+    });
+
+  // Show Terms & Conditions
+  document.querySelector(".show-terms").addEventListener("click", function () {
+    toggleModal(termsCondition, true);
+  });
+
+  // Close modal when clicking on .ph-x-circle
+  document.querySelectorAll(".ph-x-circle").forEach((button) => {
+    button.addEventListener("click", function () {
+      toggleModal(privacyPolicy, false);
+      toggleModal(termsCondition, false);
+    });
+  });
+
+  // Close modal when clicking outside .policy-content
+  document.querySelectorAll(".policy-container").forEach((modal) => {
+    modal.addEventListener("click", function (event) {
+      if (!event.target.closest(".policy-content")) {
+        toggleModal(modal, false);
+      }
+    });
+  });
+});
