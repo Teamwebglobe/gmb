@@ -41,6 +41,7 @@
   display: flex;
   padding: 1em;
 }
+
 .contact-message {
   background: var(--black);
   color: var(--white);
