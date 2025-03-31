@@ -70,6 +70,45 @@ html {
   -ms-overflow-style: none;
 }
 
+/*thanku page*/
+
+.thank-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color4);
+}
+
+.thank-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.thank-content img {
+  width: 400px;
+  object-fit: contain;
+}
+
+.thank-content p {
+  width: 40%;
+  font-size: 18px;
+}
+
+.thank-content .btns {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  margin-top: 2em;
+}
+
+/*laoder*/
+
 .loader-wrapper {
   height: 100vh;
   position: fixed;
@@ -234,10 +273,17 @@ html {
   align-items: center;
 }
 
-.header1 img {
+.header1 .logo a {
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* .header1 img {
   width: 200px;
   object-fit: cover;
-}
+} */
 .menus {
   display: flex;
   justify-content: center;
@@ -981,6 +1027,22 @@ html {
 
 /* mobile phones to tablet devices*/
 @media (max-width: 991.98px) {
+  .thank-wrapper {
+    padding: 0em 1em;
+  }
+
+  .thank-content img {
+    width: 250px;
+  }
+
+  .thank-content p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .thank-content .btns {
+    margin-top: 1em;
+  }
   /*policies*/
   .policy-container .policy-content {
     width: 100%;

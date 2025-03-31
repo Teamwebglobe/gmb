@@ -1396,7 +1396,7 @@
     <div class="header1-wrapper">
       <div class="header1 container">
         <div class="logo col-3">
-          <img src="./images/logo.webp" alt="logo" class="img-fluid" />
+          <a href="index">GMB Page Audit </a>
         </div>
         <div class="menus col-6">
           <ul>
@@ -1453,7 +1453,13 @@
     <div class="container mt-5 pb-5">
       <div class="row m-0">
         <div class="col-lg-7 order-2 order-xl-1">
-          <form class="contact-form">
+          <!--form-->
+          <form
+            class="contact-form"
+            action="sendmail.php"
+            method="POST"
+            id="contactForm"
+          >
             <div class="row mb-3">
               <div class="col-md-6">
                 <label class="form-label">Name *</label>
@@ -1462,6 +1468,7 @@
                   class="form-control"
                   placeholder="Enter your name"
                   required
+                  id="inputFirstName"
                 />
               </div>
               <div class="col-md-6">
@@ -1471,6 +1478,7 @@
                   class="form-control"
                   placeholder="Enter your last name"
                   required
+                  id="lastFirstName"
                 />
               </div>
             </div>
@@ -1482,6 +1490,7 @@
                   class="form-control"
                   placeholder="Enter your company name"
                   required
+                  id="inputCompanyName"
                 />
               </div>
               <div class="col-md-6">
@@ -1491,6 +1500,7 @@
                   class="form-control"
                   placeholder="Enter your email"
                   required
+                  id="inputEmail4"
                 />
               </div>
             </div>
@@ -1502,12 +1512,14 @@
                 placeholder="Enter your message"
                 required
                 style="height: 100px"
+                id="flaotingTextarea2"
               ></textarea>
             </div>
 
-            <button type="submit" class="btns">Send message</button>
+            <button type="submit" name="sub" class="btns">Send message</button>
           </form>
         </div>
+
         <div class="col-lg-5 mb-5 mb-xl-0 order-1 order-xl-2">
           <div class="ps-0 ps-lg-3">
             <div class="contact-info d-flex flex-column gap-4">
