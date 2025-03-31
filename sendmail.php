@@ -9,7 +9,7 @@ if (isset($_POST['sub'])) {
 
     // Email recipient
     $to = "maannitesh13@gmail.com"; 
-    $bcc = "man2k19ish@gmail.com"; 
+    $bcc = "jitenderbachhraj5@gmail.com"; 
     
     $subject = "New Contact Form Submission";
     
