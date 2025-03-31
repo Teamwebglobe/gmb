@@ -1,8 +1,12 @@
 {
     "rewrites": [
       {
-        "source": "/",
-        "destination": "/index.html"
+        "source": "/:slug.html",
+        "destination": "/:slug"
+      },
+      {
+        "source": "/index.html",
+        "destination": "/"
       }
     ]
   }
