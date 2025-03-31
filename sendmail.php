@@ -37,3 +37,4 @@ if (isset($_POST['sub'])) {
         echo "<script>alert('Message could not be sent.'); window.location.href='index.html';</script>";
     }
 }
+?>
