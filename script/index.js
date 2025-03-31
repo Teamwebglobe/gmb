@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const menuBar = document.querySelector(".menu-bar");
   const headerWrapper = document.querySelector(".header2-wrapper");
-  const closeBtn = document.querySelector(".ph-x-circle");
+  const closeBtn = document.querySelector(".header2-wrapper .ph-x-circle");
   const body = document.body;
 
   menuBar.addEventListener("click", function () {
