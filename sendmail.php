@@ -26,6 +26,8 @@ if (isset($_POST['sub'])) {
         "From: no-reply@yourdomain.com",
         "Bcc: $bcc"
     ];
+
+    // changes done 
     
     // Convert headers to string
     $headers = implode("\r\n", $headers);
