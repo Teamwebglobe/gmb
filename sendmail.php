@@ -12,6 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sub'])) {
         echo "<script>alert('Invalid email format!'); window.location.href='index.html';</script>";
         exit;
     }
+    // changes done
+    
 
     // Email recipient
     $to = "maannitesh13@gmail.com"; 
