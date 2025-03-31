@@ -10,6 +10,22 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16884624111"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-16884624111");
+    </script>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="./images/fav.png" />
     <title>Google My Business</title>
     <!--css bootstrap-->
     <link
@@ -1455,12 +1471,7 @@
       <div class="row m-0">
         <div class="col-lg-7 order-2 order-xl-1">
           <!--form-->
-          <form
-            class="contact-form"
-            action="sendmail.php"
-            method="POST"
-            id="contactForm"
-          >
+          <form class="contact-form" id="contactForm">
             <div class="row mb-3">
               <div class="col-md-6">
                 <label class="form-label">Name *</label>
