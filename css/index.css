@@ -1050,6 +1050,10 @@ html {
   }
   /*headers*/
 
+  .header1 .logo a {
+    font-size: 20px;
+  }
+
   .header1 .menus {
     display: none;
   }
