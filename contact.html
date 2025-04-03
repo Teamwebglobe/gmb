@@ -1457,14 +1457,15 @@
       <div class="row m-0">
         <div class="col-lg-7 order-2 order-xl-1">
           <!--form-->
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="https://gmbemailsender.vercel.app/api/contact" method="POST">
             <div class="row mb-3">
               <div class="col-md-6">
                 <label class="form-label">Name *</label>
                 <input
                   type="text"
                   class="form-control"
-                  name="inputFirstName"
+                  name="name"
+                  id="name"
                   placeholder="Enter your name"
                   required
                 />
@@ -1474,7 +1475,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  name="lastFirstName"
+                  name="lname"
+                  id="lname"
                   placeholder="Enter your last name"
                   required
                 />
@@ -1486,7 +1488,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  name="inputCompanyName"
+                  name="company"
+                  id="company"
                   placeholder="Enter your company name"
                   required
                 />
@@ -1496,7 +1499,8 @@
                 <input
                   type="email"
                   class="form-control"
-                  name="inputEmail4"
+                  name="email"
+                  id="email"
                   placeholder="Enter your email"
                   required
                 />
@@ -1507,7 +1511,8 @@
               <textarea
                 class="form-control"
                 rows="4"
-                name="flaotingTextarea2"
+                name="message"
+                id="message"
                 placeholder="Enter your message"
                 required
                 style="height: 100px"
@@ -1618,6 +1623,37 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+  
+        // Create a new FormData object to collect form data
+        const formData = new FormData(event.target);
+  
+        // Send the data using Fetch API (can also use Axios or other libraries)
+        fetch('https://gmbemailsender.vercel.app/api/contact', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+      // Check if the response status is 200 (OK)
+      if (response.status === 200) {
+       window.location.href="thanku.html"
+      } else {
+        throw new Error('Failed to submit form. Status: ' + response.status);
+      }
+    })
+        .then(data => {
+          // console.log('Success:', data);
+          alert('Form submitted successfully!');
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert('There was an error submitting the form.');
+        });
+      });
+    </script>
 
     <!--js bootstrap-->
     <script
