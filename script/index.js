@@ -36,33 +36,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // contact form //
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from submitting the traditional way
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
 
-    // Create a new FormData object to collect form data
-    const formData = new FormData(event.target);
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
 
-    // Send the data using Fetch API (can also use Axios or other libraries)
-    fetch("https://gmbemailsender.vercel.app/api/contact", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => {
-        // Check if the response status is 200 (OK)
-        if (response.status === 200) {
-          window.location.href = "thanku.html";
-        } else {
-          throw new Error("Failed to submit form. Status: " + response.status);
-        }
+      // Create a new FormData object to collect form data
+      const formData = new FormData(event.target);
+
+      // Send the data using Fetch API
+      fetch("https://gmbemailsender.vercel.app/api/contact", {
+        method: "POST",
+        body: formData,
       })
-
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("There was an error submitting the form.");
-      });
-  });
+        .then((response) => {
+          if (response.status === 200) {
+            window.location.href = "thanku.html";
+          } else {
+            throw new Error(
+              "Failed to submit form. Status: " + response.status
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("There was an error submitting the form.");
+        });
+    });
+  }
+});
 
 //header//
 document.addEventListener("DOMContentLoaded", function () {
