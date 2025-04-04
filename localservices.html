@@ -1967,13 +1967,20 @@
             </p>
           </div>
           <div class="col-12 col-xl-6">
-            <form class="contact-form">
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://gmbemailsender.vercel.app/api/contact"
+              method="POST"
+            >
               <div class="row mb-3">
                 <div class="col-md-6">
                   <label class="form-label">Name *</label>
                   <input
                     type="text"
                     class="form-control"
+                    name="name"
+                    id="name"
                     placeholder="Enter your name"
                     required
                   />
@@ -1983,6 +1990,8 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="lname"
+                    id="lname"
                     placeholder="Enter your last name"
                     required
                   />
@@ -1994,6 +2003,8 @@
                   <input
                     type="text"
                     class="form-control"
+                    name="company"
+                    id="company"
                     placeholder="Enter your company name"
                     required
                   />
@@ -2003,6 +2014,8 @@
                   <input
                     type="email"
                     class="form-control"
+                    name="email"
+                    id="email"
                     placeholder="Enter your email"
                     required
                   />
@@ -2013,13 +2026,17 @@
                 <textarea
                   class="form-control"
                   rows="4"
+                  name="message"
+                  id="message"
                   placeholder="Enter your message"
                   required
                   style="height: 100px"
                 ></textarea>
               </div>
 
-              <button type="submit" class="btns">Send message</button>
+              <button type="submit" name="sub" class="btns">
+                Send message
+              </button>
             </form>
           </div>
         </div>
