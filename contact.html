@@ -1644,10 +1644,7 @@
         throw new Error('Failed to submit form. Status: ' + response.status);
       }
     })
-        .then(data => {
-          // console.log('Success:', data);
-          alert('Form submitted successfully!');
-        })
+        
         .catch((error) => {
           console.error('Error:', error);
           alert('There was an error submitting the form.');
