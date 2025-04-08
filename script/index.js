@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (window.innerWidth >= 1192 && window.innerWidth <= 1366) {
       xPercentValue = -95 * (contents.length - 1);
     } else if (window.innerWidth >= 1500) {
-      xPercentValue = -88 * (contents.length - 1);
+      xPercentValue = -90 * (contents.length - 1);
     }
 
     gsap.to(contents, {
