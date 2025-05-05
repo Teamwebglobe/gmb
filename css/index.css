@@ -164,6 +164,19 @@ html {
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+/*whatsapp*/
+.whats-app {
+  position: fixed;
+  bottom: 80px;
+  left: 40px;
+  z-index: 998;
+}
+
+.whats-app img {
+  width: 65px;
+  height: 65px;
+}
+
 /*btns*/
 
 .btns {
